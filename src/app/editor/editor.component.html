@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-centered">
+      <div id="menu" class="menu" contenteditable="false">
+        <div class="group">
+          <div class="item" id="bold" (click)="changeActive($event)">
+            <i class="fa fa-bold"></i>
+          </div>
+          <div class="item" id="italic" (click)="changeActive($event)">
+            <i class="fa fa-italic"></i>
+          </div>
+          <div class="dropdown item">
+            <button
+              class="dropdown-toggle border-none"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              {{ pixcel }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div
+                class="dropdown-item"
+                href="#"
+                (click)="selectPixcel('12px')"
+              >
+                12px
+              </div>
+              <div
+                class="dropdown-item"
+                href="#"
+                (click)="selectPixcel('14px')"
+              >
+                14px
+              </div>
+              <div
+                class="dropdown-item"
+                href="#"
+                (click)="selectPixcel('18px')"
+              >
+                18px
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="app"></div>
+    </div>
+  </div>
+</div>
